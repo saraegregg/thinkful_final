@@ -1,0 +1,17 @@
+
+
+html, body {
+    background-color: #768f82;
+    color: white;
+}
+
+header {
+    border-bottom: 4px solid rgb(21, 115, 66);
+}
+
+.card {
+    
+    background-color: black;
+    border: 3px solid green;
+    border-radius: 10px;
+}
