@@ -2,8 +2,8 @@ import React from 'react';
 
 function SubmitButton() {
     return (
-        <div>
-            <button className="btn btn-secondary" type="submit">Save</button>
+        <div className="p-2">
+            <button className="btn btn-primary" type="submit">Save</button>
         </div>
     );
 };

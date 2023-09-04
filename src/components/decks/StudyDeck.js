@@ -37,9 +37,9 @@ function StudyDeck() {
     return (
         <>
             <BreadcrumbNav items={breadcrumbItems}/>
-            <h2>Study: {currentDeck.name}</h2>
-            <div >
-                <div >
+            <h2 className="p-2">Study: {currentDeck.name}</h2>
+            <div className="card">
+                <div>
                     <FlipCard cards={currentDeck.cards} />
                 </div>
             </div>

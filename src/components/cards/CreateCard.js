@@ -2,8 +2,7 @@ import React, {useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import { createCard, readDeck } from '../../utils/api';
 import BreadcrumbNav from '../BreadcrumbNav';
-import SubmitButton from '../buttons/SubmitButton';
-import CancelButton from '../buttons/CancelButton';
+import Form from '../../utils/Form';
 
 function CreateCard(){
     const initialCardState = {
@@ -64,53 +63,10 @@ function CreateCard(){
         {label: 'Add Card', isActive: true}
     ]
 
-    function Form(props) {
-        return (
-            <>
-                <h2 >{props.formTitle}</h2>
-                <form onSubmit={props.submitHandler}>
-                    <div className="row">
-                        <div className="col">
-                        <label htmlFor={props.htmlForOne}>{props.formLabelOne}</label>
-                        <textarea
-                            required
-                            rows="4" cols="30"
-                            placeholder={props.formPlaceholderOne}
-                            name={props.formNameOne}
-                            type="text"
-                            onChange={props.changeHandler}
-                            defaultValue={props.formValueOne ? props.formValueOne : ""}
-                        />
-                        </div>
-                        <div className="col">
-                        <label htmlFor={props.htmlForTwo}>{props.formLabelTwo}</label>
-                        <textarea
-                            required
-                            rows="4" cols="30"
-                            placeholder={props.formPlaceholderTwo}
-                            name={props.formNameTwo}
-                            type="text"
-                            onChange={props.changeHandler}
-                            defaultValue={props.formValueTwo ? props.formValueTwo : ""}
-                        />
-                        </div>
-                        </div>
-                        <br />
-                            <div className="row">
-                        <CancelButton cancelHandler={props.cancelHandler} />
-                        <SubmitButton />
-                    </div>
-                </form>
-            </>
-        );
-    };
-
-
-
 
     if (currentDeck) {
         return (
-            <>
+            <div>
                 <BreadcrumbNav items={breadcrumbItems} />
                 <Form
                     formTitle={`${currentDeck.name} Add Card`}
@@ -126,9 +82,7 @@ function CreateCard(){
                     formPlaceholderTwo={`Back side of card`}
                     formNameTwo={`back`}
                 />
-
-                
-            </>
+            </div>
         );
     };
     return <p>Loading...</p>

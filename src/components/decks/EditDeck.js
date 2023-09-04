@@ -63,7 +63,7 @@ function EditDeck() {
     ]
 
     return (
-        <>
+        <div>
             <BreadcrumbNav items={breadcrumbItems}/>
             <Form
                 formTitle={`Edit ${currentDeck.name}`}
@@ -81,7 +81,7 @@ function EditDeck() {
                 formNameTwo={`description`}
                 formValueTwo={currentDeck.description}
             />
-        </>
+        </div>
     );
 };
 

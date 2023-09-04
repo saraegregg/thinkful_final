@@ -23,25 +23,27 @@ function DeckList() {
 
     if (decks) {
         return (
-            <>
+            <div className='p-5'>
                 <CreateButton 
                     buttonFunction={"Deck"} 
                     routePath={"/decks/new"} 
                 />
-                <h2>Available Decks</h2>
+                <br />
+                <h2><b>Available Decks</b></h2>
+                <br />
                 <ul style={{listStyleType: 'none'}}>{currentDecks}</ul>
-            </>
+            </div>
         )
     }
     return (
-        <>
+        <div>
             <h2>There are no decks yet.</h2>
             <p>Let's create one and get started!</p>
             <CreateButton 
                 buttonFunction={"Deck"} 
                 routePath={"/decks/new"} 
             />
-        </>
+        </div>
     )
 };
 

@@ -3,6 +3,7 @@
 html, body {
     background-color: #768f82;
     color: white;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 header {
@@ -11,7 +12,13 @@ header {
 
 .card {
     
-    background-color: black;
-    border: 3px solid green;
+    background-color: rgb(64, 71, 67);
+    border: 4px solid rgb(21, 115, 66);
     border-radius: 10px;
+    margin: 8px;
+
+}
+
+.card-title {
+    font-weight: 700;
 }

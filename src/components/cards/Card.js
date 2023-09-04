@@ -7,12 +7,14 @@ function Card({ card, deck }){
     
 if (card) {
     return (
-        <div>
+        <div className="card p-4">
             <div className="row">
                 <div className="col">
+                    <h5 className="card-title">Front</h5>
                     <p>{card.front}</p>
                 </div>
                 <div className="col">
+                    <h5 className="card-title">Back</h5>
                     <p>{card.back}</p>
                 </div>
             </div>

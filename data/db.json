@@ -9,6 +9,11 @@
       "name": "React Router",
       "description": "React Router is a collection of navigational components that compose declaratively with your application.",
       "id": 2
+    },
+    {
+      "name": "Spanish Surprise",
+      "description": "Fun, Spanish words to learn",
+      "id": 3
     }
   ],
   "cards": [
@@ -43,17 +48,22 @@
       "id": 5
     },
     {
-      "cards": [],
-      "front": "baby",
-      "back": "bebe",
-      "deckId": 1,
-      "id": 7
+      "front": "el tenedor",
+      "back": "the fork",
+      "deckId": 3,
+      "id": 9
     },
     {
-      "front": "hey",
-      "back": "heyo",
-      "deckId": 1,
-      "id": 8
+      "front": "el cuchillo",
+      "back": "the knife",
+      "deckId": 3,
+      "id": 10
+    },
+    {
+      "front": "la cucharra",
+      "back": "the spoon",
+      "deckId": 3,
+      "id": 11
     }
   ]
 }

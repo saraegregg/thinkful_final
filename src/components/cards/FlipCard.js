@@ -83,11 +83,11 @@ function FlipCard({ cards }) {
                 {cardIsFlipped ? <p>{currentCard.front}</p> : <p>{currentCard.back}</p>}
                 <div className="row">
                     <div>
-                        <button className="btn btn-secondary" onClick={cardFlipHandler}>Flip</button>
+                        <button className="btn btn-secondary p-2" onClick={cardFlipHandler}>Flip</button>
                     </div>
                     {!cardIsFlipped ? (
                         <div>
-                            <button className="btn btn-secondary" onClick={nextCardHandler}>Next</button>
+                            <button className="btn btn-secondary p-2" onClick={nextCardHandler}>Next</button>
                         </div>
                         ) : (
                         null
@@ -98,24 +98,24 @@ function FlipCard({ cards }) {
     };
     if (!endOfCardDeck && cards.length <= 2) {
         return (
-            <>
+            <div>
                 <h4>Not enough cards.</h4>
                 <p>You need at least 3 cards to study a deck. There {cards.length < 2 ? "is" : "are"} {cards.length} {cards.length < 2 ? "card" : "cards"} currently in this deck.</p>
                 <CreateButton
                     routePath={`/decks/${deckId}/cards/new`}
                     buttonFunction={"Card"}
                 />
-            </>
+            </div>
         );
     };
     if (endOfCardDeck) {
         return (
-            <>
-            <h5>Great work!</h5>
-            <p>You've reached the end of the deck.</p>
-            <p>You can restart the cards by clicking 'OK'.</p>
-            <p>Clicking 'Cancel' will return you to the list of available decks.</p>
-            </>
+            <div>
+                <h5>Great work!</h5>
+                <p>You've reached the end of the deck.</p>
+                <p>You can restart the cards by clicking 'OK'.</p>
+                <p>Clicking 'Cancel' will return you to the homescreen and list of available decks.</p>
+            </div>
         );
     }
     return <p>Loading...</p>

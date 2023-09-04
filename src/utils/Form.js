@@ -2,10 +2,10 @@ import React from 'react';
 import CancelButton from '../components/buttons/CancelButton';
 import SubmitButton from '../components/buttons/SubmitButton';
 
-export default function Form(props) {
+function Form(props) {
     return (
-        <>
-            <h2 >{props.formTitle}</h2>
+        <div>
+            <h2 className="p-2">{props.formTitle}</h2>
             <form onSubmit={props.submitHandler}>
                 <div className="row">
                     <div className="col">
@@ -39,6 +39,8 @@ export default function Form(props) {
                     <SubmitButton />
                 </div>
             </form>
-        </>
+        </div>
     );
 };
+
+export default Form;

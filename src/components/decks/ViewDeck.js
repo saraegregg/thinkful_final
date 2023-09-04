@@ -35,13 +35,13 @@ function ViewDeck() {
     ]
 
     return (
-        <>
+        <div>
             <BreadcrumbNav items={breadcrumbItems}/>
-            <h2 >View Deck</h2>
+            <h2><b>View Deck</b></h2>
             <Deck deck={currentDeck} currentPage={"ViewDeck"} />
-            <h3 >Cards</h3>
+            <h3><b>Cards</b></h3>
             <CardList deck={currentDeck} cards={currentDeck.cards} />
-        </>
+        </div>
     );
 };
 

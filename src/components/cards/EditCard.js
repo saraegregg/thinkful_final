@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Form from '../../utils/Form';
-import { Link, useHistory, useParams } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import BreadcrumbNav from '../BreadcrumbNav';
 import { updateCard, readDeck } from '../../utils/api';
 
@@ -67,7 +67,7 @@ function EditCard() {
 
     if (currentDeck && currentCard) {
         return (
-            <>
+            <div>
                 <BreadcrumbNav items={breadcrumbItems} />
                 <Form
                     formTitle={`${currentDeck.name}: Edit Card ${currentCard.id}`}
@@ -85,7 +85,7 @@ function EditCard() {
                     formNameTwo={`back`}
                     formValueTwo={currentCard.back}
                 />
-            </>
+            </div>
         );
     };
     return <p>Loading...</p>

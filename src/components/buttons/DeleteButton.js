@@ -2,16 +2,16 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 
-function DeleteButton({ id, buttonFunction, currentPage, deleteItem }) {
+function DeleteButton( props ) {
     const history = useHistory();
 
     const deleteHandler = (event) => {
         event.preventDefault();
         
-        if (window.confirm(`Are you sure you want to delete this ${buttonFunction.toLowerCase()}? This cannot be undone.`)) {
-            deleteItem(id)
+        if (window.confirm(`Are you sure you want to delete this ${props.buttonFunction.toLowerCase()}? This cannot be undone.`)) {
+            props.delete(props.id)
                 .then(() => {
-                    if (currentPage === "ViewDeck") {
+                    if (props.currentPage === "ViewDeck") {
                         history.push("/");
                     } else {
                         history.go(0);
@@ -21,7 +21,9 @@ function DeleteButton({ id, buttonFunction, currentPage, deleteItem }) {
     };
 
     return (
-        <button className="btn btn-secondary" onClick={deleteHandler}>Delete {buttonFunction}</button>
+        <div className="p-2">
+            <button className="btn btn-danger" onClick={deleteHandler}>Delete {props.buttonFunction}</button>
+        </div>
     );
 };
 

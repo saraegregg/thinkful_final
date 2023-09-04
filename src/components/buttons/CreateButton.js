@@ -7,11 +7,11 @@ function CreateButton({ routePath, buttonFunction }) {
     const buttonText = buttonFunction ==='Card' ? cardCopy : deckCopy
 
     return (
-        <span>
+        <div className="p-2">
             <Link to ={routePath}>
-                <button className="btn btn-secondary">{buttonText}</button>
+                <button className="btn btn-primary">{buttonText}</button>
             </Link>
-        </span>
+        </div>
     );
 };
 

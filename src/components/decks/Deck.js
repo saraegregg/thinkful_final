@@ -10,41 +10,39 @@ function Deck({ deck, currentPage }) {
     const { cards } = deck;
 
     return (
-        <div className="container" style={{border: "black"}}>
-            <div className="container">
-                <h3>{deck.name}</h3>
+        <div className="container-fluid">
+            <div className="card p-4">
+            <div className="row justify-content-between">
+                <h3><b>{deck.name}</b></h3>
                 <p>{cards.length} cards</p>
             </div>
             <p>{deck.description}</p>
             <div className="container">
                 <div className="row">
-                    <div>
                     {currentPage === "DeckList" && (
-                        <div >
+                        <div className="p-2">
                             <Link to={`/decks/${deck.id}`} className="btn btn-secondary">View</Link>
                         </div>
                     )}
+                    <div className="buttons">
+                        { currentPage === "ViewDeck" && (
+                            <EditButton
+                            routePath={`/decks/${deck.id}/edit`}
+                            buttonFunction={"Deck"}
+                            />
+                        )}
                     </div>
-                    <div className="row">
-                        <div className="col">
-                            { currentPage === "ViewDeck" && (
-                                <EditButton
-                                routePath={`/decks/${deck.id}/edit`}
-                                buttonFunction={"Deck"}
-                                />
-                            )}
-                        </div>
-                        <div className="col">
-                        <Link to={`/decks/${deck.id}/study`} className="btn btn-secondary">Study</Link>
-                        </div>
-                        <div className="col">
-                            <CreateButton routePath={`/decks/${deck.id}/cards/new`} buttonFunction={"Card"}>Add Cards</CreateButton>
-                        </div>
-                        <div className="col">
-                            <DeleteButton id={deck.id} currentPage={currentPage} buttonFunction={"Deck"} deleteItem={deleteDeck} />
-                        </div>
+                    <div className="p-2">
+                    <Link to={`/decks/${deck.id}/study`} className="btn btn-primary p-2">Study</Link>
+                    </div>
+                    <div>
+                        <CreateButton routePath={`/decks/${deck.id}/cards/new`} buttonFunction={"Card"}>Add Cards</CreateButton>
+                    </div>
+                    <div>
+                        <DeleteButton id={deck.id} currentPage={currentPage} buttonFunction={"Deck"} deleteItem={deleteDeck} />
                     </div>
                 </div>
+            </div>
             </div>
         </div>
     )

@@ -4,12 +4,12 @@ import Routes from "./Routes";
 
 function Layout() {
   return (
-    <>
-      <div className="container">
+    <div>
+      <div className="container-fluid p-4">
         <Header />
         <Routes />
       </div>
-    </>
+    </div>
   );
 }
 

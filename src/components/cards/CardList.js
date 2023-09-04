@@ -5,7 +5,7 @@ function CardList({ deck }) {
     if (deck.cards) {
         return (
             deck.cards.map((card) => (
-                <div key={card.id}>
+                <div className="container p-2" key={card.id}>
                     <Card card={card} deck={deck} />
                 </div>
             ))
