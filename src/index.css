@@ -22,3 +22,8 @@ header {
 .card-title {
     font-weight: 700;
 }
+
+.textarea {
+    padding: 6px;
+    margin: 0px 12px;
+}

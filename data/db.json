@@ -14,6 +14,11 @@
       "name": "Spanish Surprise",
       "description": "Fun, Spanish words to learn",
       "id": 3
+    },
+    {
+      "name": "Deck example",
+      "description": "an example deck",
+      "id": 4
     }
   ],
   "cards": [
@@ -64,6 +69,18 @@
       "back": "the spoon",
       "deckId": 3,
       "id": 11
+    },
+    {
+      "front": "card 1",
+      "back": "answer 1",
+      "deckId": 4,
+      "id": 12
+    },
+    {
+      "front": "card 2",
+      "back": "tarjeta 2",
+      "deckId": 4,
+      "id": 13
     }
   ]
 }
