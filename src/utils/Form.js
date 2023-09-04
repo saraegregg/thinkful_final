@@ -15,7 +15,8 @@ function Form(props) {
                             type="text"
                             className="textarea"
                             required
-                            rows="4" cols="30"
+                            rows="4" 
+                            cols="30"
                             placeholder={props.formPlaceholderOne}
                             name={props.formNameOne}
                             onChange={props.changeHandler}
