@@ -81,6 +81,18 @@
       "back": "tarjeta 2",
       "deckId": 4,
       "id": 13
+    },
+    {
+      "front": "card 3",
+      "back": "tres",
+      "deckId": 4,
+      "id": 14
+    },
+    {
+      "front": "",
+      "back": "",
+      "deckId": 4,
+      "id": 15
     }
   ]
 }

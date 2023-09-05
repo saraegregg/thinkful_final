@@ -53,7 +53,7 @@ function CreateCard(){
         createCard(deckId, currentCard)
         .then(() => {
             setCurrentCard({...initialCardState});
-            history.push(`/decks/${deckId}`);
+            history.push(`/decks/${deck.id}/cards/new`);
         });
     };
 
