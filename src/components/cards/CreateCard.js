@@ -63,8 +63,6 @@ function CreateCard(){
         {label: 'Add Card', isActive: true}
     ]
 
-    console.log("currentCard: ", currentCard)
-
     if (currentDeck) {
         return (
             <div>
