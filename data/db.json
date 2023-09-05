@@ -83,16 +83,22 @@
       "id": 13
     },
     {
-      "front": "card 3",
-      "back": "tres",
+      "front": "1",
+      "back": "2",
       "deckId": 4,
       "id": 14
     },
     {
-      "front": "",
-      "back": "",
+      "front": "4",
+      "back": "cuatro",
       "deckId": 4,
       "id": 15
+    },
+    {
+      "front": "5",
+      "back": "cinco",
+      "deckId": 4,
+      "id": 16
     }
   ]
 }

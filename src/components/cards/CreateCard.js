@@ -53,7 +53,7 @@ function CreateCard(){
         createCard(deckId, currentCard)
         .then(() => {
             setCurrentCard({...initialCardState});
-            history.push(`/decks/${deck.id}/cards/new`);
+            window.location.reload();
         });
     };
 
@@ -63,6 +63,7 @@ function CreateCard(){
         {label: 'Add Card', isActive: true}
     ]
 
+    console.log("currentCard: ", currentCard)
 
     if (currentDeck) {
         return (
@@ -77,10 +78,12 @@ function CreateCard(){
                     formLabelOne={`Front`}
                     formPlaceholderOne={`Front side of card`}
                     formNameOne={`front`}
+                    formValueOne={currentCard.front}
                     htmlForTwo={`createCardBack`}
                     formLabelTwo={`Back`}
                     formPlaceholderTwo={`Back side of card`}
                     formNameTwo={`back`}
+                    formValueTwo={currentCard.back}
                 />
             </div>
         );
